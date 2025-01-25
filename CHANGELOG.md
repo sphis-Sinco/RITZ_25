@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 ## [1.0.0] - 2025.1.25
+This is compared to the [Itch.io Ritz version](https://ninja-muffin24.itch.io/ritz)
 ### Added
 - MAIN MENU ADDED. Cooler UI, feels like an actual game now.
 - Minimap generation from the OGMO level data. Shows when a key gets pressed (M key/SELECT/Y on gamepad or something like that)
