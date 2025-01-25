@@ -8,8 +8,8 @@ import flixel.FlxSprite;
 import flixel.group.FlxSpriteGroup;
 import flixel.math.FlxPoint;
 import flixel.math.FlxRect;
-import flixel.math.FlxVector;
-import flixel.util.FlxPath;
+import flixel.math.FlxPoint;
+import flixel.path.FlxPath;
 
 import zero.utilities.OgmoUtils;
 
@@ -160,7 +160,7 @@ abstract PathSpriteLink(FlxSprite) to FlxSprite
             ( nodeStart.x - pathStart.x
             , nodeStart.y - pathStart.y
             );
-        var dis = FlxVector.get(nodeEnd.x - nodeStart.x, nodeEnd.y - nodeStart.y);
+        var dis = FlxPoint.get(nodeEnd.x - nodeStart.x, nodeEnd.y - nodeStart.y);
         // black line with white outline (crude)
         final width = Std.int(Math.max(3, dis.length + 2));
         final key = 'path_$width';

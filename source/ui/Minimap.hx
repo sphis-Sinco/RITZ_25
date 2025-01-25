@@ -1,5 +1,6 @@
 package ui;
 
+import flixel.group.FlxGroup.FlxTypedGroup;
 import data.OgmoTilemap;
 
 import flixel.FlxCamera;
@@ -29,13 +30,17 @@ class Minimap extends flixel.group.FlxGroup
     
     public final checkpoints:PositionMap = [];
     public final cheese:PositionMap = [];
-    final map:MiniTilemap = new MiniTilemap();
-    final fog:FlxTilemap = new FlxTilemap();
+    final map:OgmoTilemap;
+    final fog:FlxTilemap;
     
     public function new (levelPath:String)
     {
         super(2);
-        add(map = new MiniTilemap(levelPath, cheese, checkpoints));
+
+        var thismap = new MiniTilemap(levelPath, cheese, checkpoints);
+        map = thismap;
+
+        add(map);
         add(fog = new FlxTilemap());
         fog.loadMapFromArray
             ( [for (i in 0...map.totalTiles) 1]
@@ -68,12 +73,12 @@ class Minimap extends flixel.group.FlxGroup
             for(y in Std.int(shape.top)...Std.int(shape.bottom))
             {
                 if (fog.getTile(x, y) != 0)
-                    fog.setTile(x, y, 0);//, false);
+                    fog.setTileIndex(x, y, 0);//, false);
             }
         }
         
         //redraw all
-        // fog.setTileByIndex(0, fog.getTileByIndex(0));
+        // fog.setTileIndexByIndex(0, fog.getTileByIndex(0));
         shape.put();
     }
     
@@ -85,7 +90,7 @@ class Minimap extends flixel.group.FlxGroup
         else if (cheese[id] == null)
             throw 'Null cheese id:$id';
         #end
-        map.setTile(Std.int(cheese[id].x), Std.int(cheese[id].y), CHEESE);
+        map.setTileIndex(Std.int(cheese[id].x), Std.int(cheese[id].y), CHEESE);
     }
     
     inline public function showCheckpointGet(id:Int)
@@ -96,7 +101,7 @@ class Minimap extends flixel.group.FlxGroup
         else if (checkpoints[id] == null)
             throw 'Null checkpoint id:$id';
         #end
-        map.setTile(Std.int(checkpoints[id].x), Std.int(checkpoints[id].y), RAT);
+        map.setTileIndex(Std.int(checkpoints[id].x), Std.int(checkpoints[id].y), RAT);
     }
     
     inline public function getMapTile(x, y):Int return map.getTile(x, y);
@@ -212,7 +217,7 @@ abstract MiniTilemap(OgmoTilemap) to OgmoTilemap
     inline static function stampMap(map:OgmoTilemap, x:Int, y:Int, index:Int, fg:Bool):Void
     {
         if (fg || map.getTile(x, y) == -1)
-            map.setTile(x, y, index);
+            map.setTileIndex(x, y, index);
     }
 }
 

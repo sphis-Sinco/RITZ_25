@@ -13,7 +13,7 @@ class Main extends openfl.display.Sprite
 				Std.int(stage.stageWidth / SCALE),
 				Std.int(stage.stageHeight / SCALE),
 				states.BootState,
-				1, 60, 60, true
+				1, 60, true
 			)
 		);
 		

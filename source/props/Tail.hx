@@ -4,7 +4,7 @@ import flixel.FlxObject;
 import flixel.FlxSprite;
 import openfl.geom.Rectangle;
 import flixel.math.FlxPoint;
-import flixel.math.FlxVector;
+import flixel.math.FlxPoint;
 import flixel.tile.FlxTilemap;
 import flixel.tweens.FlxEase;
 import flixel.util.FlxColor;
@@ -118,7 +118,7 @@ class Tail extends FlxSprite
     
     function drawTo(x:Float, y:Float)
     {
-        var line = FlxVector.get(x - this.x, y - this.y);
+        var line = FlxPoint.get(x - this.x, y - this.y);
         setGraphicSize(Std.int(Math.max(line.length, 1)), Std.int(height));
         angle = line.degrees;
     }

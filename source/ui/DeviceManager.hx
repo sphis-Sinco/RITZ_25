@@ -339,7 +339,7 @@ class DeviceManager extends FlxSubState
         startOutro();
     }
     
-    function startOutro()
+    override function startOutro()
     {
         state = Outro;
         

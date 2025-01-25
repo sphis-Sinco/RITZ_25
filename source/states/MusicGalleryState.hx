@@ -7,7 +7,7 @@ import flixel.FlxG;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import flixel.text.FlxText;
-import flixel.system.FlxSound;
+import flixel.sound.FlxSound;
 
 import lime.utils.Assets;
 import haxe.Json;

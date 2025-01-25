@@ -12,7 +12,7 @@ This is compared to the [Itch.io Ritz version](https://ninja-muffin24.itch.io/ri
 - Minimap generation from the OGMO level data. Shows when a key gets pressed (M key/SELECT/Y on gamepad or something like that)
     - Minimap also shows areas they've been, and the cheese and checkpoints they've collected.
 - Able to warp to any checkpoint you've already reached.
-- A PAUSE SCREEN, which shows all game controls for both keyboard and gamepad. Also allows you to mute and restart the game.
+- A PAUSE SCREEN, which shows all game controls. Also allows you to mute and restart the game.
 - Holding down pans the camera down temporarily to see below
 - Moving platforms can stop at a node, instead of constantly moving. Can also pause at the start of a loop.
 - Moving platforms can have a 'trigger' thing, which will keep the platform still until the specified trigger is fired.

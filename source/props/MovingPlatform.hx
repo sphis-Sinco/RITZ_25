@@ -5,7 +5,7 @@ import props.Platform;
 
 import flixel.FlxObject;
 import flixel.FlxSprite;
-import flixel.math.FlxVector;
+import flixel.math.FlxPoint;
 
 import zero.utilities.OgmoUtils;
 
@@ -14,7 +14,7 @@ class MovingPlatform extends TriggerPlatform
     inline static var TRANSFER_DELAY = 0.2;
     
     /** The velocity it transfers to rits when he jumps */
-    public var transferVelocity(default, null):ReadonlyVector = FlxVector.get();
+    public var transferVelocity(default, null):ReadonlyVector = FlxPoint.get();
     var timer = 0.0;
     
     public var ogmoPath(get, set):Null<OgmoPath>;
@@ -129,7 +129,7 @@ abstract Bolt(FlxSprite) to FlxSprite
     }
 }
 
-abstract ReadonlyVector(FlxVector) from FlxVector
+abstract ReadonlyVector(FlxPoint) from FlxPoint
 {
     public var x(get, never):Float; inline function get_x() return this.x;
     public var y(get, never):Float; inline function get_y() return this.y;
