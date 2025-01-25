@@ -163,7 +163,7 @@ class Player extends FlxSprite
         playCamera.maxScrollY = FlxG.worldBounds.bottom;
         
         FlxG.cameras.add(playCamera);
-        FlxCamera.defaultCameras.push(playCamera);
+        FlxG.cameras.setDefaultDrawTarget.push(playCamera);
     }
     
     public function dieAndRespawn(x, y):Void
@@ -745,7 +745,7 @@ class Player extends FlxSprite
     {
         super.destroy();
         FlxG.cameras.remove(playCamera);
-        FlxCamera.defaultCameras.remove(playCamera);
+        FlxG.cameras.setDefaultDrawTarget.remove(playCamera);
         if (settings != null)
         {
             PlayerSettings.removeAvatar(this);

@@ -168,10 +168,8 @@ class PauseScreen extends FlxGroup
     
     override function update(elapsed:Float)
     {
-        var oldCameras = FlxCamera.defaultCameras;
-        FlxCamera.defaultCameras = cameras;
+        var oldCameras = FlxG.cameras.setDefaultDrawTarget;
         super.update(elapsed);
-        FlxCamera.defaultCameras = oldCameras;
         
         if (!settings.controls.PAUSE)
             pauseReleased = true;
