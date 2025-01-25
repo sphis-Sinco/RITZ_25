@@ -135,7 +135,7 @@ class TypedMouseButton<T:FlxSprite> extends FlxTypedButton<T>
         // super.onOutHandler();
     }
     
-    inline function setAnimation(frame:Int)
+    inline function setAnimation(frame:FlxButtonState)
     {
         status = frame;
         animation.play(statusAnimations[frame]);
@@ -143,8 +143,8 @@ class TypedMouseButton<T:FlxSprite> extends FlxTypedButton<T>
         
         var fromScale = scale.x;
         var fromAngle = angle;
-        var toScale = frame == FlxButton.HIGHLIGHT ? 1.4 : 1;
-        var toAngle = frame == FlxButton.HIGHLIGHT ? FlxG.random.int(-10, 10) : 0;
+        var toScale = frame == FlxButtonState.HIGHLIGHT ? 1.4 : 1;
+        var toAngle = frame == FlxButtonState.HIGHLIGHT ? FlxG.random.int(-10, 10) : 0;
         
         //Todo: FlxTween.num with null checks
         FlxTween.num(0, 1, 0.2, null,
@@ -164,9 +164,9 @@ class TypedMouseButton<T:FlxSprite> extends FlxTypedButton<T>
         );
     }
     
-    public function deselect() setAnimation(FlxButton.NORMAL);
-    public function select() setAnimation(FlxButton.HIGHLIGHT);
-    public function press() setAnimation(FlxButton.PRESSED);
+    public function deselect() setAnimation(FlxButtonState.NORMAL);
+    public function select() setAnimation(FlxButtonState.HIGHLIGHT);
+    public function press() setAnimation(FlxButtonState.PRESSED);
     inline public function release() select();
     
     override function updateButton()

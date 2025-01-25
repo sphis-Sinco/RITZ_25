@@ -336,10 +336,10 @@ class DeviceManager extends FlxSubState
         requestingPlayer = -1;
         newGamepads.resize(0);
         
-        startOutro();
+        startOutroCustom();
     }
     
-    override function startOutro()
+    function startOutroCustom()
     {
         state = Outro;
         
