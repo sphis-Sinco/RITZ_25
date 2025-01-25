@@ -5,7 +5,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 
-## [Unreleased]
+## [1.0.0] - 2025.1.25
 ### Added
 - MAIN MENU ADDED. Cooler UI, feels like an actual game now.
 - Minimap generation from the OGMO level data. Shows when a key gets pressed (M key/SELECT/Y on gamepad or something like that)
@@ -15,7 +15,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Holding down pans the camera down temporarily to see below
 - Moving platforms can stop at a node, instead of constantly moving. Can also pause at the start of a loop.
 - Moving platforms can have a 'trigger' thing, which will keep the platform still until the specified trigger is fired.
-
 
 ### Changed
 - PLAYER MOVEMENT
@@ -36,8 +35,3 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Falling more than 3 tiles will make the camera pan down
 - Intro sequence, now it plays a jingle, Ritz jumps into the title ina  different way.
 - Title screen doesn't immediately put you into the game
-
-
-## [1.0.0] - 2020-01-25
-### Added
-- Uh everything. This was the release for Pixel Day 2020 on Newgrounds.
