@@ -10,7 +10,7 @@ This is compared to the [Itch.io Ritz version](https://ninja-muffin24.itch.io/ri
 ### Added
 - MAIN MENU ADDED. Cooler UI, feels like an actual game now.
 - Minimap generation from the OGMO level data. Shows when a key gets pressed (M key/SELECT/Y on gamepad or something like that)
-- Minimap also shows areas they've been, and the cheese and checkpoints they've collected.
+    - Minimap also shows areas they've been, and the cheese and checkpoints they've collected.
 - Able to warp to any checkpoint you've already reached.
 - A PAUSE SCREEN, which shows all game controls for both keyboard and gamepad. Also allows you to mute and restart the game.
 - Holding down pans the camera down temporarily to see below
@@ -19,14 +19,14 @@ This is compared to the [Itch.io Ritz version](https://ninja-muffin24.itch.io/ri
 
 ### Changed
 - PLAYER MOVEMENT
-- Min jump height: 2.5 tiles -> 1.5 tiles
-- Max jump height: 4.5 tiles -> 3.5 tiles
-- (Air hop height unchanged, jump duration and distance compensated for above values)
-- (Ground) Stop to full speed:    0.16  s -> 0.25 s;
-- (Ground) Stop from full speed:  0.135 s -> 0.3  s;
-- (Air)    Stop to full speed:    0.16  s -> 0.36 s;
-- (Air)    Stop from full speed:  0.135 s -> 0.2  s;
-- Post air hop acceleration unchanged
+    - Min jump height: 2.5 tiles -> 1.5 tiles
+    - Max jump height: 4.5 tiles -> 3.5 tiles
+    - (Air hop height unchanged, jump duration and distance compensated for above values)
+    - (Ground) Stop to full speed:    0.16  s -> 0.25 s;
+    - (Ground) Stop from full speed:  0.135 s -> 0.3  s;
+    - (Air)    Stop to full speed:    0.16  s -> 0.36 s;
+    - (Air)    Stop from full speed:  0.135 s -> 0.2  s;
+    - Post air hop acceleration unchanged
 - Camera zooms in on rats while they talk. Ionno I thought it looked cool.
 - Spikes no longer use a box for a hitshape, the collision matches the triangle graphic.
 - Changed the camera logic a bit. Made camera move less during jumps.
