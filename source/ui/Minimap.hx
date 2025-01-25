@@ -72,13 +72,13 @@ class Minimap extends flixel.group.FlxGroup
         {
             for(y in Std.int(shape.top)...Std.int(shape.bottom))
             {
-                if (fog.getTile(x, y) != 0)
+                if (fog.getTileIndex(x, y) != 0)
                     fog.setTileIndex(x, y, 0);//, false);
             }
         }
         
         //redraw all
-        // fog.setTileIndexByIndex(0, fog.getTileByIndex(0));
+        // fog.setTileIndexByIndex(0, fog.getTileIndexByIndex(0));
         shape.put();
     }
     
@@ -104,8 +104,8 @@ class Minimap extends flixel.group.FlxGroup
         map.setTileIndex(Std.int(checkpoints[id].x), Std.int(checkpoints[id].y), RAT);
     }
     
-    inline public function getMapTile(x, y):Int return map.getTile(x, y);
-    inline public function isFog(x, y):Bool return fog.getTile(x, y) > 0;
+    inline public function getMapTile(x, y):Int return map.getTileIndex(x, y);
+    inline public function isFog(x, y):Bool return fog.getTileIndex(x, y) > 0;
     inline public function canHaveCursor(x:Int, y:Int):Bool
     {
         return x >= 0 && y >= 0
@@ -216,7 +216,7 @@ abstract MiniTilemap(OgmoTilemap) to OgmoTilemap
     
     inline static function stampMap(map:OgmoTilemap, x:Int, y:Int, index:Int, fg:Bool):Void
     {
-        if (fg || map.getTile(x, y) == -1)
+        if (fg || map.getTileIndex(x, y) == -1)
             map.setTileIndex(x, y, index);
     }
 }
