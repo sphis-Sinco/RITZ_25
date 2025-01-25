@@ -4,3 +4,4 @@ export/
 APIStuff.hx
 ApiData.hx
 .vscode/
+.haxelib/
