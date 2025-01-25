@@ -29,8 +29,8 @@ class Minimap extends flixel.group.FlxGroup
     
     public final checkpoints:PositionMap = [];
     public final cheese:PositionMap = [];
-    final map:MiniTilemap;
-    final fog:FlxTilemap;
+    final map:MiniTilemap = new MiniTilemap();
+    final fog:FlxTilemap = new FlxTilemap();
     
     public function new (levelPath:String)
     {
